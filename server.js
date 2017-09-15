@@ -3,7 +3,7 @@ const hbs = require('hbs')
 const fs = require('fs')
 
 // const APP_PORT = process.env.UDEMY_PORT || 3000
-const APP_PORT = process.env.UDEMY_PORT || 3000
+const APP_PORT = process.env.PORT || 3000
 var app = express()
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -63,5 +63,5 @@ app.get('/bad', (req, res) => {
 })
 
 app.listen(APP_PORT, () => {
-  console.log(`Server started on port: ${APP_PORT}`)
+  console.log(`Server started on port: ${APP_PORT }`)
 })
